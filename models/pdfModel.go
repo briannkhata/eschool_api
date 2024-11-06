@@ -2,9 +2,9 @@ package models
 
 import "time"
 
-type Coarse struct {
+type Pdf struct {
 	Id           int       `gorm:"primaryKey;autoIncrement" json:"_id"`
-	Title         string    `json:"name'`
+	Title        string    `json:"title'`
 	URL          string    `json:"url'`
 	GradeLevelID int       `json:"grade_level_id'`
 	Description  string    `json:"description'`

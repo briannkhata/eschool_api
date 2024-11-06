@@ -8,11 +8,12 @@ type User struct {
 	Lastname   string     `json:"last_name'`
 	Username   string     `json:"username'`
 	Password   string     `json:"password'`
-	Role       string     `json:"role'`
+	Role       string     `json:"role'` //Admin/Student/Teacher
 	GradeLevel GradeLevel `json:"grade_level'`
 	Address    string     `json:"address'`
-	Deleted   bool      `json:"deleted"`
-	CreatedAt time.Time `json:"created_at"`
-	UpdatedAt time.Time `json:"updated_at"`
-	DeletedAt time.Time `json:"deleted_at"`
+	Online     bool       `json:"online'`
+	Deleted    bool       `json:"deleted"`
+	CreatedAt  time.Time  `json:"created_at"`
+	UpdatedAt  time.Time  `json:"updated_at"`
+	DeletedAt  time.Time  `json:"deleted_at"`
 }

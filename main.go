@@ -1,6 +1,9 @@
 package main
 
 import (
+	"fmt"
+	"os"
+
 	db "github.com/briannkhata/eschool/config"
 	"github.com/briannkhata/eschool/routes"
 
@@ -17,8 +20,11 @@ func main() {
 	// Setup routes
 	routes.Setup(app)
 
-	// Start the server on port 8001
-	err := app.Listen(":8001")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8001"
+	}
+	err := app.Listen(fmt.Sprintf(":%s", port))
 	if err != nil {
 		panic(err)
 	}

@@ -97,10 +97,6 @@ func CashiersList(c *fiber.Ctx) error {
 		})
 }
 
-func EditCashier(c *fiber.Ctx) error {
-	return nil
-}
-
 func UpdateCashier(c *fiber.Ctx) error {
 	cashierId := c.Params("cashierId")
 	var cashier models.Cashier
@@ -139,5 +135,21 @@ func UpdateCashier(c *fiber.Ctx) error {
 }
 
 func DeleteCashier(c *fiber.Ctx) error {
-	return nil
+	cashierId := c.Params("cashierId")
+	var cashier models.Cashier
+
+	db.DB.Where("id=?", cashierId).First(&cashier)
+
+	if cashier.Id == 0 {
+		return c.Status(404).JSON(fiber.Map{
+			"success": false,
+			"message": "Cashier not Found",
+		})
+	}
+
+	db.DB.Where("id=?", cashierId).Delete(&cashier)
+	return c.Status(404).JSON(fiber.Map{
+		"success": true,
+		"message": "Cashier Deleted",
+	})
 }

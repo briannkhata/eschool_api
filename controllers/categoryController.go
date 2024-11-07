@@ -1,12 +1,13 @@
 package controllers
 
 import (
-	"github.com/gofiber/fiber/v2"
-	db "go_sales_api/config"
-	"go_sales_api/middleware"
-	"go_sales_api/models"
 	"log"
 	"strconv"
+
+	db "github.com/briannkhata/eschool/config"
+	"github.com/briannkhata/eschool/middleware"
+	"github.com/briannkhata/eschool/models"
+	"github.com/gofiber/fiber/v2"
 )
 
 // Category struct with two values

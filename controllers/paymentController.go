@@ -3,9 +3,9 @@ package controllers
 import (
 	"fmt"
 	"github.com/gofiber/fiber/v2"
-	db "go_sales_api/config"
-	"go_sales_api/middleware"
-	"go_sales_api/models"
+	db "github.com/briannkhata/eschool/config"
+	"github.com/briannkhata/eschool/middleware"
+	"github.com/briannkhata/eschool/models"
 	"log"
 	"strconv"
 )

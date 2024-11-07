@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"go_sales_api/controllers"
+	"github.com/briannkhata/eschool/controllers"
 	"github.com/gofiber/fiber/v2"
 )
 
